@@ -1,0 +1,76 @@
+body {
+    margin: 5%;
+    background-image: url("../images/backgroundImage.jpg");
+    background-size: 100% 100%;
+}
+.grid_container {
+    width: 100%;
+    text-align: center;
+}
+.cards_grid{
+    display: inline-block;
+    margin: auto;
+}
+.grid_row{
+    margin-bottom: 5px;
+}
+
+
+.card {
+    /*width: 100px;*/
+    /*height: 100px;*/
+    position: relative;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+    perspective: 500px;
+    display: inline-block;
+}
+
+.card_face {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    backface-visibility: hidden;
+}
+
+.card_face.front {
+    background-image: url("../images/questionMark.jpg");
+    background-size: 100% 100%;
+}
+
+.card_face.back {
+    background-color: black;
+    transform: rotateY(180deg);
+}
+
+.card_face.back .emoji{
+    max-height: 90%;
+    margin: 5px;
+    display: block;
+}
+
+
+.card.is-flipped {
+    transform: rotateY(180deg);
+}
+
+
+.level_select{
+    width:1000px;
+    margin-bottom:16px;
+    font-size:18px;
+    background:transparent;
+    color:white;
+    height:50px;
+    text-align: center;
+}
+
+.level_select_container{
+    text-align: center;
+}
+
+.score_container{
+    color: white;
+    text-align: center;
+    font-size: larger;
+}
