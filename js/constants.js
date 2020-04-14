@@ -23,7 +23,9 @@ export const LEVELS = [
 ];
 
 export const GRID_HEIGHT = 500;
-export const GRID_WIDTH = 1100;
+const screenWidth = (window.innerWidth > 0) ? window.innerWidth : screen.width;
+
+export const GRID_WIDTH = (screenWidth - 200) > 1100 ? 1100 : (screenWidth - 100);
 
 export const RE_FLIP_TIME = 1000; //1 sec
 
