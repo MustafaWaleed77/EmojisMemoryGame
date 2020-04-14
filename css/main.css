@@ -3,24 +3,31 @@ body {
     background-image: url("../images/backgroundImage.jpg");
     background-size: 100% 100%;
 }
+
 .grid_container {
     width: 100%;
     text-align: center;
 }
-.cards_grid{
+
+.cards_grid {
     display: inline-block;
     margin: auto;
 }
-.grid_row{
+
+.grid_row {
     margin-bottom: 5px;
 }
 
 
 .card {
-    /*width: 100px;*/
-    /*height: 100px;*/
     position: relative;
-    transition: transform 1s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
     transform-style: preserve-3d;
     perspective: 500px;
     display: inline-block;
@@ -31,6 +38,8 @@ body {
     height: 100%;
     width: 100%;
     backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
 }
 
 .card_face.front {
@@ -41,9 +50,13 @@ body {
 .card_face.back {
     background-color: black;
     transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
 }
 
-.card_face.back .emoji{
+.card_face.back .emoji {
     max-height: 90%;
     margin: 5px;
     display: block;
@@ -52,24 +65,28 @@ body {
 
 .card.is-flipped {
     transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
 }
 
 
-.level_select{
-    width:500px;
-    margin-bottom:16px;
-    font-size:18px;
-    background:transparent;
-    color:white;
-    height:50px;
+.level_select {
+    width: 500px;
+    margin-bottom: 16px;
+    font-size: 18px;
+    background: transparent;
+    color: white;
+    height: 50px;
     text-align: center;
 }
 
-.level_select_container{
+.level_select_container {
     text-align: center;
 }
 
-.score_container{
+.score_container {
     color: white;
     text-align: center;
     font-size: larger;
