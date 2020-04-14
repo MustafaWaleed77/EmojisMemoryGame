@@ -14,8 +14,10 @@ window.changeLevel = (event, index) => {
 window.hideOverlay = () => {
     document.getElementById("overlay").style.display = "none";
     if (currentLevel.level < Constants.LAST_LEVEL) {
+        document.getElementById("level-select").value = currentLevel.level;
         changeLevel(null, currentLevel.level);
     } else {
+        document.getElementById("level-select").value = 0;
         resetGame();
     }
 }
